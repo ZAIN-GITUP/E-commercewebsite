@@ -1,0 +1,129 @@
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  background-color:white;
+}
+
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+
+
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+.cartWrapper {
+  display: flex;
+  flex-direction: column; /* Stack items vertically */
+  gap: 1rem; /* Space between cart items */
+}
+
+.cartCard {
+  display: flex;
+  align-items: center; /* Center align items vertically */
+  gap: 1rem; /* Space between elements */
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.productImage {
+  width: 100px; /* Ensure all images have the same width */
+  height: 100px; /* Ensure all images have the same height */
+  object-fit: cover;
+}
+
+.quantityControl {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* Space between quantity control elements */
+  margin-left: -2px; /* Bring quantity control closer to the image */
+}
+
+.btn {
+  margin-top: 1rem;
+  background-color: #007bff;
+  color: white;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem; /* Space between icon and text */
+}
+
+.removeBtn {
+  background-color: #dc3545;
+}
+
+.removeBtn:hover {
+  background-color: #c82333;
+}
+
+.clearBtn {
+  background-color: #28a745;
+}
+
+.clearBtn:hover {
+  background-color: #218838;
+}
+
+.totalPrice {
+  margin-top: 1rem;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Align items to the start and end */
+}
+
+@media (max-width: 720px) {
+  .cartCard {
+    display: flex;
+    flex-direction: column; /* Stack items vertically for smaller screens */
+  }
+
+  .categoryButtons 
+  {
+    display: flex;
+    flex-direction: column;
+  margin: 2rem ;
+gap:6px
+  }
+  /* Custom CSS for Navbar responsiveness */
+
+  .container {
+    display: flex;
+      padding-left: 1rem;
+      padding-right: 1rem;
+  }
+  
+  .navbar-items {
+    display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+  }
+
+  .navbar-items img {
+      margin-right: 0.5rem;
+  }
+}
+
+
+
+
