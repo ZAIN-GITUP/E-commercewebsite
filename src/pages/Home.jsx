@@ -49,10 +49,10 @@ const Home = () => {
     }
 
     return (
-        <div className=" bg-white p-4  max-w-screen-lg mx-auto">
+        <div className=" mobile bg-white p-4  max-w-screen-lg mx-auto">
                      
             {!selectedProduct && (
-                <div className="searchWrapper mb-4 flex flex-col items-center">
+                <div className="searchWrapper  mt-6  flex flex-col items-center">
                     {/* Search Bar */}
                     <input
                         type="text"
@@ -65,7 +65,7 @@ const Home = () => {
                     <div className="categoryButtons space-x-3 space-y-0">
                     <button
                             onClick={() => setCategory('')}
-                            className={`bg-blue-500 text-white px-1 py-0 rounded ${category === '' ? 'bg-blue-700' : ''}`}
+                            className={`bg-blue-500 text-white px-0  ml-4 w-28 py-0 rounded ${category === '' ? 'bg-blue-700' : ''}`}
                         >
                             All
                         </button>
@@ -107,7 +107,7 @@ const Home = () => {
             ) : (
                 <>
                     {/* Product Cards */}
-                    <div className="productsWrapper grid grid-cols-1 custom:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    <div className="productsWrapper -mt-6 grid grid-cols-1 custom:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
   {paginatedProducts.map((product) => (
     <div
       className="card relative border p-2 rounded-lg bg-white shadow-lg group hover:shadow-xl transition-shadow duration-300"
@@ -141,12 +141,12 @@ const Home = () => {
                     
                     {/* Pagination */}
                     {category === '' && (
-                        <div className="pagination mt-4 flex justify-center space-x-2">
+                        <div className="pagination  custom:grid-cols-2 sx:grid-cols-7  md:grid-cols-7 sm:grid-col-3 mt-4  justify-center space-x-2">
                             {Array.from({ length: Math.ceil(filteredProducts.length / itemsPerPage) }, (_, index) => (
                                 <button
                                     key={index}
                                     onClick={() => handlePageChange(index + 1)}
-                                    className={`px-4 py-2 border rounded ${currentPage === index + 1 ? 'bg-blue-500 text-white' : 'bg-white'}`}
+                                    className={` btns px-4 py-2 border rounded ${currentPage === index + 1 ? 'bg-blue-500 text-white' : 'bg-white'}`}
                                 >
                                     {index + 1}
                                 </button>
@@ -155,6 +155,7 @@ const Home = () => {
                     )}
                 </>
             )}
+            <foooter/>
         </div>
     );
 };

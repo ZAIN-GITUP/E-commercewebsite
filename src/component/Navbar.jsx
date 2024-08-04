@@ -30,8 +30,8 @@ const Navbar = () => {
     const totalQuantity = items.reduce((acc, item) => acc + item.quantity, 0);
 
     return (
-        <div className={`${isScrolled ? 'bg-slate-400' : 'bg-white'} ${isScrolled ? 'fixed' : 'absolute'} top-0 left-0 right-0 z-50 transition-colors duration-300 w-full`}>
-            <div className="container mx-auto flex flex-col sm:flex-row justify-between items-center py-2 px-4">
+        <div className={`containers ${isScrolled ? 'bg-slate-400' : 'bg-white'} ${isScrolled ? 'fixed' : 'absolute'} top-0 left-4 right-6 z-50 transition-colors duration-300  `}>
+            <div className="containers mx-auto flex  sm:flex-row justify-between w-full items-center py-2 px-0">
                 <Link to="/" className="flex items-center space-x-4 mb-2 sm:mb-0">
                     <img src={icon} alt="Logo" className="h-8 sm:h-10" />
                     <span className="text-sm font-bold text-black sm:text-lg">ShopNest</span>
@@ -43,7 +43,7 @@ const Navbar = () => {
                             {items.length}
                         </span>
                     </Link>
-                    <Link to="/bags" className="flex items-center relative">
+                    <Link to="/cart" className="flex items-center relative">
                         <img className='w-6 h-6' src={bags} alt="Bags" />
                         <span className="absolute top-0 right-0 transform translate-x-1/2 -translate-y-1/2 bg-red-500 text-white font-bold text-xs sm:text-base rounded-full p-2">
                             {totalQuantity}

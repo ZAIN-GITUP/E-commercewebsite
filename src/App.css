@@ -1,7 +1,7 @@
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  max-width: 1440px;
+  margin: 0 ;
+  padding: 0rem;
   text-align: center;
   background-color:white;
 }
@@ -122,8 +122,48 @@ gap:6px
   .navbar-items img {
       margin-right: 0.5rem;
   }
+  .containers
+  {
+  width:90%;
+  margin: 0 0  0 0;
 }
 
+.mobile{
+  width: 50%;
+  margin: 0 0  0 0;
+}
+}
 
+@media (max-width: 460px) {
+  .containers
+  {
+  width:70%;
+  margin: 0rem   0rem 0rem  0rem ;
+  align-items: center;
+  justify-content: center;
 
+  }
+  .mobile{
+    width: 100%;
+    margin: 0 0  0 0;
+  }
+  .pagination {
+    width: 85%;
+    margin: 0 0  0 1rem ;
+    display: flex;
 
+    
+  }
+  .btns{
+    padding: 0%;
+    margin: 0%;
+    gap: 0.1px;
+  }
+  #root {
+
+    align-items: center;
+    margin: 0%;
+    padding: 0%;
+    width: 80%;
+  }
+  }
